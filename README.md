@@ -1,4 +1,13 @@
 # Collaborative-Shopping
+## THEME
+One of the things that differs from online vs offline shopping experience is “shopping together”. This void of
+company in online shopping can make it boring over a period of time. Ever wondered how collaborative
+shopping can improve shopping experience? Imagine you get to seek your friend’s style tips/suggestions on
+the go.
+Let us break the traditional myths of e-commerce shopping and bring togetherness. We would call that
+Collaborative online shopping. This term refers to an activity in which a consumer shops at an eCommerce
+platform with remotely located shopping partners such as friends or family. This brings the best of both the
+shopping worlds together.
 
 ## How to Use: 
 If you want to do discussion just click on go and join the room by your name then copy the link which you can see at top and share this to you friends once your friend joined via link you can start discussion 
