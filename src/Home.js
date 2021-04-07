@@ -25,7 +25,7 @@ class Home extends Component {
 
 	render() {
 		return (
-			<div style={{background: "#f4c2c2"}} className="container">
+			<div style={{background: "#87ceeb"}} className="container">
 				<div style={{fontSize: "14px", background: "#FFA62F", width: "10%", textAlign: "center", margin: "auto", marginBottom: "10px"}}>
 					 
 					<IconButton style={{color: "black"}} onClick={() => window.location.href="https://www.myntra.com/"}>
@@ -42,9 +42,9 @@ class Home extends Component {
 					background: "white", width: "30%", height: "auto", padding: "20px", minWidth: "400px",
 					textAlign: "center", margin: "auto", marginTop: "100px"
 				}}>
-					<p style={{ margin: 0, fontWeight: "bold", paddingRight: "50px" }}>Start Discussion</p>
-					<Input placeholder="URL" onChange={e => this.handleChange(e)} />
-					<Button variant="contained" color="primary" onClick={this.join} style={{ margin: "20px" }}>Go</Button>
+					<p style={{ margin: 0, fontWeight: "bold", paddingRight: "50px" }}></p>
+					{/* <Input placeholder="URL" onChange={e => this.handleChange(e)} /> */}
+					<Button variant="contained" color="#FF8C00" onClick={this.join} style={{ margin: "20px"}}>Join the Room</Button>
 				</div>
 			</div>
 		)

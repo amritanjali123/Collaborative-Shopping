@@ -17,6 +17,7 @@
     "nodemon": "^2.0.2",
     "react": "^16.13.1",
     "react-anchorme": "^2.2.0",
+    "react-animated-heart": "0.0.6-alpha.2",
     "react-bootstrap": "^1.0.0",
     "react-css-grid": "^2.0.0-0",
     "react-dom": "^16.13.1",

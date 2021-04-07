@@ -16,6 +16,8 @@ user can open the product from chat room by just clicking on the link or user ca
 ## Dependency 
 myntra wile have to add a button on tha page by the name collobrate so that once user click on that they can divert to the given page that we have built
 
+### Please Use Google Chrome
+  This work only on Google Chrome
 ## Technology used
 
 ReactJS, Node.js, SocketIO

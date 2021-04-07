@@ -25,6 +25,7 @@ body {
 
 .div-send-msg {
     display: flex;
+    width: "7000px";
     align-items: center;
     justify-content: center;
     text-align: center;

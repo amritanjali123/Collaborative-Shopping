@@ -3,10 +3,15 @@ import io from 'socket.io-client'
 import faker from "faker"
 //import Linkify from 'react-linkify';
 //import React from 'react'
+//import React, { useState } from "react";
 import { Anchorme } from 'react-anchorme'
-
+//import Heart from "react-animated-heart";
+//import Heart from "react-heart"
 import {IconButton, Badge, Input, Button} from '@material-ui/core'
+
+
 import VideocamIcon from '@material-ui/icons/Videocam'
+
 import VideocamOffIcon from '@material-ui/icons/VideocamOff'
 import MicIcon from '@material-ui/icons/Mic'
 import MicOffIcon from '@material-ui/icons/MicOff'
@@ -32,10 +37,10 @@ const peerConnectionConfig = {
 		{ 'urls': 'stun:stun.l.google.com:19302' },
 	]
 }
-var socket = null
-var socketId = null
-var elms = 0
-
+var socket = null;
+var socketId = null;
+var elms = 0;
+var copyFoo;
 class Video extends Component {
 	constructor(props) {
 		super(props)
@@ -44,7 +49,7 @@ class Video extends Component {
 
 		this.videoAvailable = false
 		this.audioAvailable = false
-
+		//Go to state
 		this.state = {
 			video: false,
 			audio: false,
@@ -55,6 +60,11 @@ class Video extends Component {
 			message: "",
 			newmessages: 0,
 			askForUsername: true,
+		    //count:{ [string]: number }={},
+			countMap: {}, 
+			count: 0,
+			lnk: ""
+
 			//username: faker.internet.userName(),
 		}
 		connections = {}
@@ -363,6 +373,13 @@ class Video extends Component {
 		})
 	}
 
+	incrementMe = (ln) => {
+		// let copyFoo = { ...this.state.countMap};
+		// copyFoo[ln]++;		
+		// 	this.setState(
+		// 		{countMap: copyFoo } 
+		// 	   );		
+	  }
 	silence = () => {
 		let ctx = new AudioContext()
 		let oscillator = ctx.createOscillator()
@@ -404,18 +421,28 @@ class Video extends Component {
 	}
 
 	handleUsername = (e) => this.setState({ username: e.target.value })
-
-	// sendMessage = () => {
-	// 	socket.emit('chat-message',  <a href={ this.state.message}>Website</a>  , this.state.username)
-	// 	this.setState({ message: "", sender: this.state.username })
-	// }
-	//new
 	sendMessage = () => {
 		socket.emit('chat-message', this.state.message, this.state.username)
 		this.setState({ message: "", sender: this.state.username })
 		console.log("I am calling")
 	}
-//new
+/// for like
+	// addlike = (data, sender, socketIdSender) => {
+	// 	this.setState(prevState => ({
+	// 		messages: [...prevState.messages, { "sender": sender, "data": data }],
+	// 	}))
+	// 	if (socketIdSender !== socketId) {
+	// 		this.setState({ newmessages: this.state.newmessages + 1 })
+	// 	}
+	// }
+
+	// handleUsername = (e) => this.setState({ username: e.target.value })
+	// addlike = () => {
+	// 	socket.emit('chat-message', this.state.message, this.state.username)
+	// 	this.setState({ message: "", sender: this.state.username })
+	// 	console.log("I am calling")
+	// }
+// for like
 	copyUrl = () => {
 		let text = window.location.href
 		if (!navigator.clipboard) {
@@ -504,15 +531,17 @@ class Video extends Component {
 							</Badge>
 						</div>
 
-						<Modal show={this.state.showModal} onHide={this.closeChat} style={{ zIndex: "999999" }}>
+						<Modal size="xl" show={this.state.showModal} onHide={this.closeChat} style={{ zIndex: "9999999" }}>
 							<Modal.Header closeButton>
 								<Modal.Title>Chat Room</Modal.Title>
 							</Modal.Header>
-							<Modal.Body style={{ overflow: "auto", overflowY: "auto", height: "400px", textAlign: "left" }} >
+							<Modal.Body style={{ overflow: "auto", overflowY: "auto", height: "700px", textAlign: "left" }} >
 								{this.state.messages.length > 0 ? this.state.messages.map((item, index) => { 
 								  console.log( item.data ); 
 								  var str= item.data;
 								  var links="htt";
+								  var ans=[];
+						
 								  for(var i=3;i<str.length;i++)
 								  {
 									  if(str[i]=='p' && str[i-1]=='t' && str[i-2]=='t'&& str[i-3]=='h')
@@ -523,26 +552,72 @@ class Video extends Component {
 											  links=links + str[i];
 											  i++;
 										  }
-										  break;
+										  var cc=0;
+										  //this.state.count.link=0;
+										 
+										  //console.log(copyFoo.length);
+									   //if (Object.keys(this.state.count).length==0 ) {
+										 	copyFoo = { ...this.state.countMap};
+										 	copyFoo[links]=0;
+										// 	console.log("copyFoo " );
+										// 	console.log( copyFoo);
+											
+											//   this.setState(
+											// 	  {countMap: copyFoo } 
+											// 	 );
+
+											// this.setState((state, links) => (
+											// 	Object.assign(this.state.count,{ links: 0})
+											  
+											// ))
+											//   ),() => {
+											 	// console.log("hiii");
+											 	// console.log(this.state.countMap);
+											// });
+										// 		//  console.log(copyFoo);
+										//  console.log("hi");
+										// console.log(this.state.count);
+										// }
+										
+								//	this.setState(Object.assign(this.state.count,{ links: 0}));
+								//	console.log(this.state.count);
+								//}
+										  //this.incrementMe(links);
+										 
+										   
+										ans.push(links);
+										links="htt";
 									  }
 								  }
-								  console.log(links ); 
-								return(
-						
-									// item.data.innerHTML = item.data.innerHTML.replace(/(\s)(http:\/\/[^\s]+)(\s)/g, '$1<a href="$2">$2</a>$3');
-									 
-									//
+								  
+								  
+								  var rows = [];
+								  rows.push(
 									<div key={index} style={{textAlign: "left"}}>
-										{/* <p style={{ wordBreak: "break-all" }}><b>{item.sender}</b>: <a href={item.data}> {item.data} </a></p> */}
-										<p style={{ wordBreak: "break-all" }}><b> {item.sender} </b>: 
-										{/* <img  src={links}  alt="new"/> */}
-	                                    <Anchorme  target="_blank" rel="noreferrer noopener" >{item.data}</Anchorme> </p>
-										<p> <iframe src={links} style={{height: "30vh", width: "100%" }} /> </p>
+									
+									<p style={{ wordBreak: "break-all" }}><b> {item.sender} </b>: 
+									<Anchorme  target="_blank" rel="noreferrer noopener" >{item.data}</Anchorme> </p>
+									
 									</div>
-								)}): <p>No message yet</p>}
+									);
+								 
+								  for (var i = 0; i < ans.length; i++) {
+									var co=0;
+									//co=this.state.countMap[ans[i]];
+									rows.push(
+									<div key={index} style={{textAlign: "left"}}> 
+								
+									<p><iframe src={ans[i]} style={{height: "60vh", width: "100%" }} /> </p>
+									<button onClick={()=> this.incrementMe(ans[i])}>❤️ Likes: {co} </button>	
+									
+									</div>);
+								}
+
+								return(rows)		
+								}): <p>No message yet</p>}
 							</Modal.Body>
-							<Modal.Footer className="div-send-msg">
-								<Input placeholder="Message" value={this.state.message} onChange={e => this.handleMessage(e)} />
+							<Modal.Footer size="lg" className="div-send-msg">
+								<textarea style={{height:"100px", width: "700px",  padding: "5px"}} placeholder="Message" value={this.state.message} onChange={e => this.handleMessage(e)} />
 								<Button variant="contained" color="primary" onClick={this.sendMessage}>Send</Button>
 							</Modal.Footer>
 						</Modal>
