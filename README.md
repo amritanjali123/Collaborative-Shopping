@@ -37,6 +37,8 @@ Local setup
 1. yarn install
 2. yarn dev
 1) npm install (this will install all the package)
-2) npm run-script dev (to host web page on localhost)
+2) npm run-script dev(to host web page on localhost)
+      or 
+   npm run dev
 
 # Thank You!
