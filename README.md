@@ -13,7 +13,7 @@ shopping worlds together.
 If a user wants to initiate a discussion, then he/she will have to click on – “Join the Room” button and
 subsequently enter own name, then copy & share the generated link with friends. Once joined, the users
 can discuss among the members of the group meet.
-User can toggle audio, video, send the link of product via chat and share your myntra page screen. User friend can easly click on that link to open the product on which User wants to discuss and share their valuable feedback on the product.
+User can toggle audio, video, send the link of product via chat and share myntra page screen. User's friend can easly click on that link to open the product on which User wants to discuss and share their valuable feedback on the product.
 user can open the product from chat room by just clicking on the link or user can see the product on the frame present inside the chat room.
 ## Dependency 
 myntra wile have to add a button on tha page by the name collobrate so that once user click on that they can divert to the given page that we have built
