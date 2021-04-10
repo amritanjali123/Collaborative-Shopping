@@ -20,7 +20,8 @@ user can open the product from chat room by just clicking on the link or user ca
 
 ![alt text](Cart_ss.png)
 ## Dependency 
-myntra can add a button on tha page by the name collobrate so that once user click on that they can divert to the given page that we have built
+myntra can add a button on tha page by the name collobrate so that once user click on that they can divert to the given page that we have built. 
+myntra Can add a button similar to add to cart by the name of move to discussion then link can autometically send to the chat room we can't able to add this feature because we dont have access of myntra page source code. 
 
 ### Please Use Google Chrome
   This work only on Google Chrome
