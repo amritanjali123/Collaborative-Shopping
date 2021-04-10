@@ -404,7 +404,7 @@ class Video extends Component {
     this.state.ck[ln] = 1;
     this.setState({});
 
-    socket.emit('upvote', this.state.countMap);
+//    socket.emit('upvote', this.state.countMap);
     
   }
     // let copyFoo = { ...this.state.countMap};
