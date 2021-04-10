@@ -61,7 +61,16 @@ io.on('connection', (socket) => {
 
 	})
 
+	socket.on("upvote", (countMap) => {
+		console.log("inside app.js")
+		for(let a = 0; a < connections[key].length; ++a){
+			io.to(connections[key][a]).emit("upvote", countMap)
+		}
+		console.log("inside app.js")
+      });
+
 	socket.on('chat-message', (data, sender) => {
+		console.log("inside message app.js")
 		data = sanitizeString(data)
 		
 		sender = sanitizeString(sender)

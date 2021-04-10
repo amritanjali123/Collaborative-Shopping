@@ -11,8 +11,7 @@ class App extends Component {
 					<Switch>
 						<Route path="/:url" component={Video} />
 						<Route path="/" exact component={Home} />
-						{/* default 
-						2 div cant be return  */}
+						
 					</Switch>
 				</Router>
 			</div>
