@@ -25,7 +25,7 @@ myntra Can add a button similar to add to cart by the name of move to discussion
 
 ### Please Use Google Chrome
 
-  This work only on Google Chrome
+ Use of Google Chrome is suggested as some of the features may or may not work on other browsers.
   
 ## Technology used
 
