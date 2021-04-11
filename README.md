@@ -24,7 +24,9 @@ myntra can add a button on tha page by the name collobrate so that once user cli
 myntra Can add a button similar to add to cart by the name of move to discussion then link can autometically send to the chat room we can't able to add this feature because we dont have access of myntra page source code. 
 
 ### Please Use Google Chrome
+
   This work only on Google Chrome
+  
 ## Technology used
 
 ReactJS, Node.js, SocketIO
@@ -46,4 +48,4 @@ Local setup
      
    
 Demo: https://www.youtube.com/watch?v=T1IzSwN8VYI
-# Thank You!
+#                         Thank You!
