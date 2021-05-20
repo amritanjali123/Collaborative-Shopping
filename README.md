@@ -1,4 +1,5 @@
 # Collaborative-Shopping
+
 ## THEME
 One of the things that differs from online vs offline shopping experience is “shopping together”. This void of
 company in online shopping can make it boring over a period of time. Ever wondered how collaborative
@@ -8,6 +9,9 @@ Let us break the traditional myths of e-commerce shopping and bring togetherness
 Collaborative online shopping. This term refers to an activity in which a consumer shops at an eCommerce
 platform with remotely located shopping partners such as friends or family. This brings the best of both the
 shopping worlds together.
+## Demo 
+https://www.youtube.com/watch?v=T1IzSwN8VYI
+##
 
 ## How to Use: 
 If a user wants to initiate a discussion, then he/she will have to click on – “Join the Room” button and
@@ -45,7 +49,6 @@ Local setup
 2. yarn dev
 1) npm install (this will install all the package)
 2) npm run-script dev(to host web page on localhost)
-     
+##     
    
-Demo: https://www.youtube.com/watch?v=T1IzSwN8VYI
-#                         Thank You!
+Thank You!  0x5eba/Video-Meeting, React, webrtc, socketIO Documentation, W3School, Youtube for Helping. 
